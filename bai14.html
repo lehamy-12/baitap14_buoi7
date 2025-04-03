@@ -1,0 +1,92 @@
+<!DOCTYPE html><html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            display: grid;
+            grid-template-areas: 
+                "header header header"
+                "aside1 content aside2"
+                "footer footer footer";
+            grid-template-columns: 1fr 2fr 1fr;
+            grid-template-rows: auto 1fr auto;
+            gap: 0px;
+            padding: 10px;
+            min-height: 100vh;
+        }
+        header {
+            grid-area: header;
+            background: #7A9EAF;
+            padding: 10px;
+            text-align: center;
+        }
+        .aside1 {
+            grid-area: aside1;
+            background: #655989;
+            padding: 10px;
+        }
+        main {
+            grid-area: content;
+            background: #FFCEBB;
+            padding: 10px;
+        }
+        .img{
+            width: 100%;
+            height: auto;
+            padding: 5px;
+        }
+        .aside2 {
+            grid-area: aside2;
+            background: #DE88A5;
+            padding: 10px;
+        }
+        footer {
+            grid-area: footer;
+            background: #A888B5;
+            padding: 10px;
+            text-align: center;
+        }
+        @media (max-width: 1200px) {
+            body {
+                grid-template-areas: 
+                    "header header"
+                    "content content"
+                    "aside1 aside2"
+                    "footer footer";
+                grid-template-columns: 1fr 1fr;
+                font-size: 16px;
+            }
+        }
+        @media (max-width: 600px) {
+            body {
+                grid-template-areas: 
+                    "header"
+                    "content"
+                    "aside1"
+                    "aside2"
+                    "footer";
+                grid-template-columns: 1fr;
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>Header</header>
+    <aside class="aside2">Aside 1</aside>
+    <main>
+        <p>Lorem ipsum dolor s cumque cum commodi, sint veritatis suscipit porro, ad officiis maxime! Eum, nobis voluptatibus sapiente aperiam perspiciatis vel soluta ab nam recusandae, aspernatur nulla assumenda quaerat suscipit.</p>
+        <img src="anhnen.jpg" alt="img" class="img">
+    </main>
+    
+    <aside class="aside1">Aside 2</aside>
+    <footer>Footer</footer>
+</body>
+</html>
